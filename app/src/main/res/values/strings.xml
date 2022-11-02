@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ViewModel</string>
+    <string name="btnRed">RED</string>
+    <string name="btnGreen">GREEN</string>
+    <string name="btnBlue">BLUE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clear">CLEAR</string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/btnRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/btnRed"
+            app:layout_constraintBottom_toTopOf="@id/oneFragment"
+            app:layout_constraintEnd_toStartOf="@id/btnGreen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnGreen"
+            app:layout_constraintBaseline_toBaselineOf="@id/btnRed"
+            app:layout_constraintBottom_toTopOf="@id/twoFragment"
+            app:layout_constraintEnd_toStartOf="@id/btnBlue"
+            app:layout_constraintStart_toEndOf="@id/btnRed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnBlue"
+            app:layout_constraintBaseline_toBaselineOf="@id/btnRed"
+            app:layout_constraintBottom_toTopOf="@id/threeFragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnGreen"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/oneFragment"
+            android:name="com.kshitij.viewmodel.OneFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/twoFragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRed" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/twoFragment"
+            android:name="com.kshitij.viewmodel.TwoFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/threeFragment"
+            app:layout_constraintStart_toEndOf="@id/oneFragment"
+            app:layout_constraintTop_toBottomOf="@id/btnGreen" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/threeFragment"
+            android:name="com.kshitij.viewmodel.ThreeFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/twoFragment"
+            app:layout_constraintTop_toBottomOf="@id/btnBlue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
